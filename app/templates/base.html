@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Microblog</title>
+      {% else %}
+      <title>Welcome to Microblog</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Microblog: 
+            <a href="{{url_for('index')}}">Home</a></div>
+            <a href="{{url_for('login')}}">Add</a>
+            <a href="{{url_for('edit')}}">Edit Password</a>
+            <a href="{{url_for('delete')}}">Delete</a>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
